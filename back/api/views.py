@@ -10,8 +10,9 @@ from api.serializers import ProductSerializer
 
 
 class ProductsListAPIView(APIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
+
     def get(self, request):
         products = Product.objects.all()
-        serializer = ProductSerializer(products, many = True)
+        serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)

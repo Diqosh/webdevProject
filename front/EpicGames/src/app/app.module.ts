@@ -7,6 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { PrimaryNavigationComponent } from './primary-navigation/primary-navigation.component';
 import { ProductsWrapperComponent } from './products-wrapper/products-wrapper.component';
 import { ProductComponent } from './product/product.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {AuthInterceptor} from "./AuthInterseptor";
+
+
 
 @NgModule({
   declarations: [
@@ -14,13 +21,20 @@ import { ProductComponent } from './product/product.component';
     HeaderComponent,
     PrimaryNavigationComponent,
     ProductsWrapperComponent,
-    ProductComponent
+    ProductComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

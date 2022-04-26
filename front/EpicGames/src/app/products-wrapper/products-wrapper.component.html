@@ -1,7 +1,13 @@
+<app-primary-navigation></app-primary-navigation>
 <div class="main">
-  <div class="main__products products_wrapper">
+  <div class="main__products products_wrapper" *ngIf="isLoaded">
     <div class="container">
-      <app-product></app-product>
+      <app-product *ngFor="let game of games" [game]="game"></app-product>
+    </div>
+  </div>
+  <div class="loading" *ngIf="!isLoaded">
+    <div class="loading_str">
+      Loading...
     </div>
   </div>
 </div>

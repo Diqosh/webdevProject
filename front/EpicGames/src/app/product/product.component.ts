@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Game} from "../models";
 
 @Component({
   selector: 'app-product',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
+  @Input() game: Game | undefined = undefined
   constructor() { }
 
   ngOnInit(): void {
+
+
+  }
+
+  setActive(): void{
+    let settings = document.querySelector('.product__settings')
+    settings!.classList.toggle('active')
   }
 
 }

@@ -16,17 +16,18 @@
 
     <div class="product__text-wrapper">
       <div class="product__title">
-        test
+        {{game!.name.substring(0,10)}}
       </div>
       <div class="product__dev">
 
         <a href="">test name</a>
+
       </div>
     </div>
     <div class="product__settings-wrapper">
 
       <span>test 1234 $</span>
-      <div class="product__dots">
+      <div class="product__dots" (click)="setActive()">
         <img src="assets/images/products_image/dots.svg" alt="">
 
 

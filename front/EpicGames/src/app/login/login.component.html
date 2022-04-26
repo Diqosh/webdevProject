@@ -1,0 +1,27 @@
+
+<div class="register__wrapper">
+  <form action="" class="register__form" method="post">
+    <div class="register__logo">
+      <img src="assets/images/header/Epic_Games_logo.png" alt="">
+    </div>
+    <p>Аутентификация</p>
+
+    <div class="register__email">
+      <input type="text" name="username"  placeholder="Email" [(ngModel)]="username">
+    </div>
+    <div class="register__password">
+      <input type="password" name="password"  placeholder="Пароль" [(ngModel)]="password">
+    </div>
+
+    <div class="register__conditions">
+      <div class="register__checkbox"><input type="checkbox" name="stay_login"></div>
+      <p>Remember me</p>
+    </div>
+    <div class="register__button">
+      <button type="submit" (click)="login()">Login in</button>
+    </div>
+    <div class="signup"><a  [routerLink]="['/register']">Sign Up?</a></div>
+  </form>
+
+
+</div>

@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__leftNav leftNav">
-    <img src="assets/images/header/Epic_Games_logo.png" alt="logo" class="logo">
+    <img [routerLink]="['/home']" src="assets/images/header/Epic_Games_logo.png" alt="logo" class="logo">
     <ul class="leftNav_menu">
 
       <li class="leftNav__item"><a href="">store</a></li>
@@ -25,12 +25,12 @@
         href=""></a>
       </li>
       <li class="rightNav__item"><a href=""
-                                    style="color: red; flex-basis: 100px">Выход</a>
+                                    style="color: red; flex-basis: 100px" (click)="logout()">Выход</a>
       </li>
 
       <li class="rightNav__item"><span class="rightNav__person"><img
         src="assets/images/header/person.svg" alt="person"><span
-        class="person__green-circle"></span></span><a href="assets/pages/login.php">Sign
+        class="person__green-circle"></span></span><a [routerLink]="['/login']">Sign
         in</a>
       </li>
 

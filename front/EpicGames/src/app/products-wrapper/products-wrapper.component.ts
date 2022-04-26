@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {GameService} from "../services/game.service";
+import {Game} from "../models";
+
+
+
 
 @Component({
   selector: 'app-products-wrapper',
@@ -6,10 +11,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-wrapper.component.css']
 })
 export class ProductsWrapperComponent implements OnInit {
+  isLoaded: boolean = false
+  games: Game[] = []
 
-  constructor() { }
+  constructor(private service: GameService) { }
 
   ngOnInit(): void {
+    this.getGames()
+
+  }
+
+  getGames(){
+    this.service.getGames().subscribe(data =>{
+      this.games = data
+      this.isLoaded = true
+    })
   }
 
 }
