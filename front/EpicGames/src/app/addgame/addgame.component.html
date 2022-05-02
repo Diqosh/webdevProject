@@ -1,0 +1,13 @@
+<div class="edit_wrapper container">
+  <form class="edit_from" action="<?=BASE_URL?>/api/game/add.php" enctype="multipart/form-data" method="post">
+    <input class="edit__name" type="text" name="name">
+    <input class="edit__price" type="text" name="price">
+    <select name="category" id="cat" >
+      <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
+    </select>
+<!--    <input type="file" name="image">-->
+    <button type="submit">Submit</button>
+  </form>
+
+
+</div>

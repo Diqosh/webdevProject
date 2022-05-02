@@ -10,3 +10,7 @@ export interface AuthToken {
   access: string
   refresh: string
 }
+export interface Category {
+  id: number
+  name: String
+}

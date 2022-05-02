@@ -12,6 +12,9 @@ import { RegisterComponent } from './register/register.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./AuthInterseptor";
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { AddgameComponent } from './addgame/addgame.component';
+import { EditgameComponent } from './editgame/editgame.component';
 
 
 
@@ -23,7 +26,10 @@ import {AuthInterceptor} from "./AuthInterseptor";
     ProductsWrapperComponent,
     ProductComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    WishlistComponent,
+    AddgameComponent,
+    EditgameComponent
   ],
   imports: [
     BrowserModule,

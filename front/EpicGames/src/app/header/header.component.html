@@ -1,3 +1,4 @@
+
 <header class="header">
   <div class="header__leftNav leftNav">
     <img [routerLink]="['/home']" src="assets/images/header/Epic_Games_logo.png" alt="logo" class="logo">
@@ -19,16 +20,14 @@
     <ul class="rightNav">
       <li class="rightNav__item"><img src="assets/images/header/earth.svg" alt="earth"></li>
 
-      <li class="rightNav__item"><span class="rightNav__person"><img
-        src="assets/images/header/person.svg" alt="person"><span
-        class="person__green-circle"></span></span><a
-        href=""></a>
-      </li>
+
+
       <li class="rightNav__item"><a href=""
                                     style="color: red; flex-basis: 100px" (click)="logout()">Выход</a>
       </li>
 
-      <li class="rightNav__item"><span class="rightNav__person"><img
+
+      <li class="rightNav__item"><span class="rightNav__person" ><img
         src="assets/images/header/person.svg" alt="person"><span
         class="person__green-circle"></span></span><a [routerLink]="['/login']">Sign
         in</a>

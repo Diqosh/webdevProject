@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {Game} from "../models";
 
 @Component({
@@ -8,7 +8,7 @@ import {Game} from "../models";
 })
 export class ProductComponent implements OnInit {
   @Input() game: Game | undefined = undefined
-  constructor() { }
+  constructor(private elem: ElementRef) { }
 
   ngOnInit(): void {
 
@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
   }
 
   setActive(): void{
-    let settings = document.querySelector('.product__settings')
+    let settings = this.elem.nativeElement.querySelector('.product__settings')
     settings!.classList.toggle('active')
   }
 

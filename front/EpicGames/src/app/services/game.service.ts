@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Game} from "../models";
+import {Category, Game} from "../models";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -16,6 +16,9 @@ export class GameService {
 
   getGame(id: number): Observable<Game> {
     return this.http.get<Game>(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  }
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.BASE_URl}/api/categories`);
   }
 
 }
