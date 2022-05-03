@@ -4,6 +4,7 @@ export interface Game{
   description: String
   price: number
   author: number
+  category: Category
 }
 
 export interface AuthToken {
@@ -13,4 +14,10 @@ export interface AuthToken {
 export interface Category {
   id: number
   name: String
+}
+
+export interface Whishlist {
+  id: number
+  user: number
+  product_id: Game[]
 }

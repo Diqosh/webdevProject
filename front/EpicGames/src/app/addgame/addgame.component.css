@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 20px;
 }
-.edit_from input[type=text], .edit_from button {
+.edit_from input[type=text],.edit_from input[type=number], .edit_from button {
   padding: 5px;
   width: 250px;
   height: 40px;

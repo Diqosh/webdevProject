@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Category, Game} from "../models";
+import {Category, Game, Whishlist} from "../models";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -15,10 +15,25 @@ export class GameService {
   }
 
   getGame(id: number): Observable<Game> {
-    return this.http.get<Game>(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    return this.http.get<Game>(`${this.BASE_URl}/api/products/${id}`);
   }
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.BASE_URl}/api/categories`);
+  }
+
+  postGame(game: { name: string; price: string; category: string}){
+    return this.http.post(`${this.BASE_URl}/api/products/`, game);
+  }
+
+  putGame(id: number, game: { price: number; name: string; category: string }){
+    return this.http.put(`${this.BASE_URl}/api/products/${id}`, game);
+  }
+  deleteGame(id: number){
+    return this.http.delete(`${this.BASE_URl}/api/products/${id}`);
+  }
+
+  getWhishlist(user_id : number){
+    return this.http.get<Whishlist[]>(`${this.BASE_URl}/api/whishlist/${user_id}`);
   }
 
 }

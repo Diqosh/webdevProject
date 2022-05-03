@@ -7,8 +7,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import APIView, api_view
 from rest_framework.response import Response
 
-from api.models import Product, Category
-from api.serializers import ProductSerializer, CategorySerializer
+from api.models import Product, Category, Whislist
+from api.serializers import ProductSerializer, CategorySerializer, WhishlistSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -23,6 +23,29 @@ def productList(request):
         # json string to dict
 
         serializer = ProductSerializer(data=request.data)
+
+
+        if serializer.is_valid():
+            # call create function
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+
+
+@api_view(['GET', 'POST'])
+def whislistList(request, user_id):
+    if request.method == 'GET':
+        objs = Whislist.objects.filter(user=user_id)
+
+        serializer = WhishlistSerializer(objs, many=True)
+        # categoreis_json = [category.to_json() for category in categories]
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        # json string to dict
+
+        serializer = WhishlistSerializer(data=request.data)
+
+
         if serializer.is_valid():
             # call create function
             serializer.save()

@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'wishlist', component: WishlistComponent},
   {path: 'add_game', component: AddgameComponent},
-  {path: 'edit_game', component: EditgameComponent},
+  {path: 'edit_game/:id', component: EditgameComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 
 ];

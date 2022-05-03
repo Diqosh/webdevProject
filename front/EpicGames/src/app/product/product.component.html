@@ -26,7 +26,7 @@
     </div>
     <div class="product__settings-wrapper">
 
-      <span>test 1234 $</span>
+      <span>test {{game!.price}} $</span>
       <div class="product__dots" (click)="setActive()">
         <img src="assets/images/products_image/dots.svg" alt="">
 
@@ -34,10 +34,10 @@
 
         <div class="product__settings">
           <div class="product__edit">
-            <a routerLink="/edit_game">Edit</a>
+            <a routerLink="/edit_game/{{game!.id}}">Edit</a>
           </div>
           <div class="product__delete">
-            <a href="">Delete</a>
+            <a href="" (click)="deleteGame(game!.id)">Delete</a>
           </div>
         </div>
 
