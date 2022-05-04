@@ -10,6 +10,7 @@ import {Game} from "../models";
 })
 export class ProductDetailComponent implements OnInit {
   game: Game | undefined
+  comment: Object | undefined;
 
   constructor(private service: GameService,
               private route: ActivatedRoute,
@@ -27,6 +28,16 @@ export class ProductDetailComponent implements OnInit {
         // @ts-ignore
 
         this.category = data.category
+        console.log(data)
+      })
+
+    })
+  }
+  getComments(){
+    this.route.params.subscribe((params: Params) =>{
+      this.service.getReveiws(+params['id']).subscribe(data =>{
+        this.comment = data
+        // @ts-ignore
         console.log(data)
       })
 
