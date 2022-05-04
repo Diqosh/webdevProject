@@ -1,6 +1,7 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {Game} from "../models";
 import {GameService} from "../services/game.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product',
@@ -10,7 +11,8 @@ import {GameService} from "../services/game.service";
 export class ProductComponent implements OnInit {
   @Input() game: Game | undefined = undefined
   constructor(private elem: ElementRef,
-              private service: GameService) { }
+              private service: GameService,
+              private router: Router) { }
 
   ngOnInit(): void {
 
@@ -25,11 +27,14 @@ export class ProductComponent implements OnInit {
 
   deleteGame(id: number): void{
     this.service.deleteGame(id).subscribe(data =>{
-      console.log(data)
+      window.location.reload();
     })
+
   }
   addGame(game: number):void {
-    this.service.addWhishlistItem(game,this.getUserId()).subscribe()
+    this.service.addWhishlistItem(game,this.getUserId()).subscribe(data =>{
+
+    })
   }
   getUserId() {
     // @ts-ignore
