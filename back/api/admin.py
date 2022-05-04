@@ -15,6 +15,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Whislist)
+admin.site.register(Reviews)
+
 
 
 

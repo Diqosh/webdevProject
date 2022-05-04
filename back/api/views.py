@@ -11,6 +11,18 @@ from api.models import Product, Category, Whislist
 from api.serializers import ProductSerializer, CategorySerializer, WhishlistSerializer
 
 
+class productListAPIViews(APIView):
+    def get(self, request):
+        products = Product.objects.all()
+        serializer = ProductSerializer(products, many=True)
+        return Response(serializer.data)
+    def post(self, request):
+        serializer = ProductSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+
 @api_view(['GET', 'POST'])
 def productList(request):
     if request.method == 'GET':
