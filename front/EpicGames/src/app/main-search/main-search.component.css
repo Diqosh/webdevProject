@@ -69,12 +69,23 @@ input {
 #cat h2{
   width: 90%;
 }
-#cat {
+.cat {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 10px;
+}
+.cat:hover{
+  cursor: pointer;
 }
 
 .cat-list {
   padding-left: 10px;
+  height: 0;
+  overflow: hidden;
 }
+
+.cat-list.active{
+  height: fit-content;
+}
+
+

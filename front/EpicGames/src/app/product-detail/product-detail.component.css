@@ -204,3 +204,40 @@ footer h2 {
   color: #ccc;
   opacity: .4;
 }
+
+.comments{
+  margin-top: 50px;
+  padding-left: 200px;
+}
+.profile_wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile_wrap p{
+  font-size: 12px;
+
+}
+.profile{
+  width: 40px;
+  height: 40px;
+  background-color: #0074E4;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+.comment{
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  width: 50%;
+  height: 100px;
+  border-radius: 10px;
+  background: #4d4d4d;
+}
+.com{
+  margin-left: 40px;
+}

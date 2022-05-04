@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {GameService} from "../services/game.service";
-import {Game} from "../models";
+import {Category, Game} from "../models";
 
 @Component({
   selector: 'app-main-search',
@@ -9,10 +9,13 @@ import {Game} from "../models";
 })
 export class MainSearchComponent implements OnInit {
   games: Game[] = []
-  constructor(private service: GameService) { }
+  categories: Category[] = []
+  constructor(private service: GameService,
+              private elem: ElementRef,) { }
 
   ngOnInit(): void {
     this.getGames()
+    this.getCategories()
   }
 
   getGames(){
@@ -21,5 +24,17 @@ export class MainSearchComponent implements OnInit {
 
     })
   }
+  getCategories(){
+    this.service.getCategories().subscribe(data =>{
+        this.categories = data
+      }
+    )
+  }
 
+  setActive() {
+    let cat = document.querySelector('.cat')
+    cat!.querySelector('.cat-list')!.classList.toggle('active')
+
+
+  }
 }

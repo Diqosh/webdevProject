@@ -13,7 +13,9 @@ urlpatterns = [
     path('products/', productList),
     path('products/<int:id>', categoryDetailAPIViews.as_view()),
     path('whishlist/<int:user_id>', whislistList),
-    
+
+    path('product/<int:user_id>', whislistList),
+
     path('categories/', categoryList),
 
 ]
