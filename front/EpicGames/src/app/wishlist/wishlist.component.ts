@@ -33,7 +33,10 @@ export class WishlistComponent implements OnInit {
     })
   }
 
-  removeGame(id: number) {
-
+  removeGame(game_id: number) {
+    this.service.deleteWhishlistItem({
+      user_id: this.userId,
+      game_id: game_id
+          })
   }
 }

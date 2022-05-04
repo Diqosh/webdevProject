@@ -17,7 +17,12 @@ export class ProductsWrapperComponent implements OnInit {
   constructor(private service: GameService) { }
 
   ngOnInit(): void {
-    this.getGames()
+
+    if(!localStorage.getItem('token-access')){
+      this.isLoaded = false
+    }else {
+      this.getGames()
+    }
 
   }
 

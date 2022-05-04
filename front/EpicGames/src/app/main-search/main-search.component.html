@@ -7,52 +7,21 @@
   </button>
   <div class = "container">
     <div class = "main-page">
-      <div>
-        <img src="https://cdn1.epicgames.com/spt-assets/33451aaf33614529aadd19c54a7e9011/download-voodoo-detective-offer-hlntp.jpg?h=854&resize=1&w=640" alt="">
+
+
+
+
+      <div *ngFor="let game of games">
+        <img src="assets/images/products_image/1.png" alt="">
         <div>
-          Voodoo Detective
+          {{game.name}}
         </div>
         <div>
-          KZT 1,930
-        </div>
-      </div>
-      <div>
-        <img src="https://cdn1.epicgames.com/spt-assets/33451aaf33614529aadd19c54a7e9011/download-voodoo-detective-offer-hlntp.jpg?h=854&resize=1&w=640" alt="">
-        <div>
-          Voodoo Detective
-        </div>
-        <div>
-          KZT 1,930
-        </div>
-      </div>
-      <div>
-        <img src="https://cdn1.epicgames.com/spt-assets/33451aaf33614529aadd19c54a7e9011/download-voodoo-detective-offer-hlntp.jpg?h=854&resize=1&w=640" alt="">
-        <div>
-          Voodoo Detective
-        </div>
-        <div>
-          KZT 1,930
-        </div>
-      </div>
-      <div>
-        <img src="https://cdn1.epicgames.com/spt-assets/33451aaf33614529aadd19c54a7e9011/download-voodoo-detective-offer-hlntp.jpg?h=854&resize=1&w=640" alt="">
-        <div>
-          Voodoo Detective
-        </div>
-        <div>
-          KZT 1,930
-        </div>
-      </div>
-      <div>
-        <img src="https://cdn1.epicgames.com/spt-assets/33451aaf33614529aadd19c54a7e9011/download-voodoo-detective-offer-hlntp.jpg?h=854&resize=1&w=640" alt="">
-        <div>
-          Voodoo Detective
-        </div>
-        <div>
-          KZT 1,930
+          KZT {{game.price}}
         </div>
       </div>
     </div>
+
     <div class = "sidebar" style="font-family: Roboto, serif">
       <h2>Filters</h2>
       <div class = "inpt">

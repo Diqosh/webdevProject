@@ -35,5 +35,11 @@ export class GameService {
   getWhishlist(user_id : number){
     return this.http.get<Whishlist[]>(`${this.BASE_URl}/api/whishlist/${user_id}`);
   }
+  deleteWhishlistItem(items: any){
+
+    return this.http.get<Whishlist[]>(
+      `${this.BASE_URl}/api/whishlist/${items.user_id}/${items.game_id}`
+    );
+  }
 
 }

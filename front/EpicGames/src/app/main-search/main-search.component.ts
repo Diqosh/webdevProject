@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {GameService} from "../services/game.service";
+import {Game} from "../models";
 
 @Component({
   selector: 'app-main-search',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-search.component.css']
 })
 export class MainSearchComponent implements OnInit {
-
-  constructor() { }
+  games: Game[] = []
+  constructor(private service: GameService) { }
 
   ngOnInit(): void {
+    this.getGames()
+  }
+
+  getGames(){
+    this.service.getGames().subscribe(data =>{
+      this.games = data
+
+    })
   }
 
 }
