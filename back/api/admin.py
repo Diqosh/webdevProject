@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.contrib import admin
 
 # Register your models here.
-from api.models import Product, Category, Whislist
+from api.models import Product, Category, Whislist, Reviews
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
