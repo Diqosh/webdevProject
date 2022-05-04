@@ -99,3 +99,10 @@ def categoryList(request):
         return Response(serializer.errors)
 
 
+@api_view(['DELETE'])
+def wishlist_del(request,user_id, product_id):
+    if request.method == 'DELETE':
+        objs = Whislist.objects.get(id = user_id)
+        product = Product.objects.get(id = product_id)
+        objs.product_id.remove(product)
+        return Response({'message': 'deleted'}, status=204)

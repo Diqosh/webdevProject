@@ -4,7 +4,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
-from api.views import productList, categoryList, categoryDetailAPIViews, whislistList
+from api.views import productList, categoryList, categoryDetailAPIViews, whislistList, wishlist_del
 
 urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
@@ -13,6 +13,7 @@ urlpatterns = [
     path('products/', productList),
     path('products/<int:id>', categoryDetailAPIViews.as_view()),
     path('whishlist/<int:user_id>', whislistList),
+    path('whishlist/<int:user_id>/<int:product_id>', wishlist_del),
 
     path('product/<int:user_id>', whislistList),
 
