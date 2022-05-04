@@ -34,6 +34,6 @@ export class WishlistComponent implements OnInit {
   }
 
   removeGame(id: number) {
-    
+
   }
 }

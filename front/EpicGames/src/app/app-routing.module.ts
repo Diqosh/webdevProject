@@ -6,6 +6,8 @@ import {LoginComponent} from "./login/login.component";
 import {WishlistComponent} from "./wishlist/wishlist.component";
 import {AddgameComponent} from "./addgame/addgame.component";
 import {EditgameComponent} from "./editgame/editgame.component";
+import {MainSearchComponent} from "./main-search/main-search.component";
+import {ProductDetailComponent} from "./product-detail/product-detail.component";
 
 
 const routes: Routes = [
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'wishlist', component: WishlistComponent},
+  {path: 'search', component: MainSearchComponent},
   {path: 'add_game', component: AddgameComponent},
+  {path: 'detail/:id', component: ProductDetailComponent},
   {path: 'edit_game/:id', component: EditgameComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 

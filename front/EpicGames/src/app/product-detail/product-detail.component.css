@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: rgb(245, 245, 245);
+  font-family: Brutal,sans-serif;
+  font-weight: normal;
+}
+html  {
+  background: rgb(18, 18, 18);
+}
+h2 {
+  margin-top: 10px;
+}
+.main {
+  margin-top: 100px;
+  width:90%;
+  max-width: 1100px;
+  margin:auto;
+
+}
+.game_title{
+  margin-bottom: 50px;
+}
+.primaryNavigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.primaryNavigation__left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.primaryNavigation__search {
+  height: 40px;
+  display: flex;
+  background-color: #202020;
+  border-radius: 20px;
+
+}
+.primaryNavigation__search-img{
+  /*filter: invert(1);*/
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.primaryNavigation__search-img img{
+  width: 15px;
+  height: 15px;
+}
+.primaryNavigation__search input{
+  height: 100%;
+  width: 120px;
+  /*border-radius: 5px ;*/
+  background-color: transparent;
+}
+input::-webkit-input-placeholder {
+  font-weight: bold;
+}
+
+.primaryNavigation__right {
+  display: flex;
+  justify-content: left;
+}
+
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  margin-top: 30px;
+}
+
+.submain img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.submain div {
+  margin-top: 15px;
+}
+
+.submain2 img {
+  width: 90%;
+}
+.submain {
+  width: 70%;
+}
+
+.submain2{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.genre_features{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.genres {
+  margin-right: 40%;
+}
+.genres .features {
+  width: 50%;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+}
+button {
+  background-color: rgb(18, 18, 18);
+}
+.btn:hover {
+  opacity: 90%;
+}
+.btn button {
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(245, 245, 245);
+}
+
+.price {
+  width: 90%;
+
+}
+
+#buy-btn{
+  border: 1px solid rgb(79, 135, 143);
+  background-color: rgb(79, 135, 143);
+
+}
+
+.info {
+  width: 90%;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.info h2{
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.info p {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.info div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top:25px;
+}
+
+#line {
+  height: 1px;
+  max-height: 1px;
+  min-height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+footer {
+  background: rgb(32, 32, 32);
+  padding-left: 10%;
+  outline: none;
+  margin-top: 30px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 170px;
+  width: 90%;
+}
+ul li {
+  margin-top: 10px;
+  margin-right: 30px;
+  list-style-type: none;
+}
+
+.epicgames {
+  margin-top: 30px;
+  width: 40%;
+  line-height: 30px;
+}
+
+footer h2 {
+  color: #ccc;
+  opacity: .4;
+}

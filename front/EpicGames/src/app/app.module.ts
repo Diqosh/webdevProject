@@ -15,6 +15,9 @@ import {AuthInterceptor} from "./AuthInterseptor";
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { AddgameComponent } from './addgame/addgame.component';
 import { EditgameComponent } from './editgame/editgame.component';
+import { MainSearchComponent } from './main-search/main-search.component';
+
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -29,7 +32,10 @@ import { EditgameComponent } from './editgame/editgame.component';
     RegisterComponent,
     WishlistComponent,
     AddgameComponent,
-    EditgameComponent
+    EditgameComponent,
+    MainSearchComponent,
+
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
