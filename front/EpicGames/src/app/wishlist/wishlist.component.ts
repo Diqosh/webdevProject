@@ -37,6 +37,6 @@ export class WishlistComponent implements OnInit {
     this.service.deleteWhishlistItem({
       user_id: this.userId,
       game_id: game_id
-          })
+          }).subscribe()
   }
 }

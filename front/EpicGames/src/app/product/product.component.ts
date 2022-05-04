@@ -28,5 +28,11 @@ export class ProductComponent implements OnInit {
       console.log(data)
     })
   }
-
+  addGame(game: number):void {
+    this.service.addWhishlistItem(game,this.getUserId()).subscribe()
+  }
+  getUserId() {
+    // @ts-ignore
+    return this.userId = JSON.parse(window.atob(localStorage.getItem('token-access').split('.')[1])).user_id
+  }
 }
